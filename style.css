@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* html{
+    font-size: 13px;
+} */
+:root{
+--Moderate-violet:hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+--fw-500:500;
+--fx-600:600;
+--fs-h2:1rem;
+--fs-h3:.9rem;
+--fs-p:1.2rem;
+--fs-blockquote:.9rem;
+}
+body{
+    background-color: var(--Light-grayish-blue);
+}
+h2{
+    font-size: var(--fs-h2);
+    font-weight: var(--fx-500);
+    color:var(--White);
+}
+
+h3{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-500);
+    color:var(--White);
+    opacity:50%;
+}
+
+p{
+    font-size: var(--fs-p);
+    font-weight: var(--fx-600);
+    padding:.8em 0;
+    color:var(--White);
+    
+}
+
+blockquote{
+    font-size: var(--fs-blockquote);
+    font-weight: var(--fw-500);
+    padding:.8em 0;
+    color:var(--White);
+    opacity: 70%;
+    line-height: 1.5;
+}
+.testimonials-section{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1.1em;
+    padding:2em;
+}
+
+.card{
+    padding:1.5em 2em;
+    border-radius: .8em;
+}
+.card1{
+    background-image:url(./images/bg-pattern-quotation.svg);
+    background-position: top 0 right 2em;
+    background-repeat: no-repeat;
+    background-size: 8em;
+    background-color: var(--Moderate-violet);
+}
+.card2{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.card4{
+    background-color: var(--Very-dark-blackish-blue);
+}
+.card3,.card5{
+    background-color: var(--White);
+    color:var(--Very-dark-grayish-blue);
+}
+.heading2,
+.heading3{
+    color:var(--Very-dark-blackish-blue);
+}
+.black{
+    color:var(--Very-dark-grayish-blue);
+}
+.personal-details{
+    display:flex;
+    align-items: center;
+    gap:1em;
+}
+
+.img-div img{
+    width:3.5rem;
+    border-radius: 50%;
+    border:.2em solid var(--Light-gray);
+}
+
+@media screen and (min-width:768px){
+    .container{
+        width:90%;
+        margin:0 auto;
+    }
+    .testimonials-section{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap:.9em;
+        padding:3em 0;
+    }
+    .card{
+        padding:.8em 1.3em;
+    }
+    .card1{
+        grid-column: 1/3;
+    }
+    .card4{
+        grid-column: 2/4;
+    }
+
+    .card5{
+        grid-row: 1/3;
+        grid-column: 4/5;
+    }
+}
+
+@media  screen and (min-width:900px) {
+    .container{
+        width:80%;
+    }
+    
+}
